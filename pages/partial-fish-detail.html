@@ -1,0 +1,125 @@
+<!-- partial-home.html -->
+<section id="zones-param" class="fish-detail-page pos-static">
+
+
+    <aside class="header-container">
+        <div class="text-container">
+            <h2 class="zones-specific-header">{{zoneUpper}} ZONE</h2>
+        </div>
+        <aside class="plant-icon"><img src="img/icons/Generic_Icon_Blue.png" width="auto"  /></aside>
+    </aside>
+    <aside class="fish-brief-container">
+        <div class="fish-brief">            
+            <h2 class="color-yellow ucfirst normal-letter-space">{{name}}</h2>
+        </div>
+        <div>    
+            <div class="scientific-container"><label class="">SCIENTIFIC NAME</label>
+            <h3 class="normal-letter-space">{{fish.scname}}</h3></div>
+            <hr>
+        </div>
+        <div class="fish-brief-icons">
+            <div class="scientfic-container">
+                <img src="img/icons/EX.png" />
+                <label class="">SIZE</label>
+                
+            </div>
+            <div>
+                <img src="img/icons/EX.png" />
+                <label> IUCN </label>
+                
+            </div>
+            <div>
+                <img src="img/icons/Weight_Icon_Static.png" />
+                <label> WEIGHT </label>                
+            </div>
+        </div>
+        
+    </aside>
+    <aside class="fish-detail-container">
+        <div class="fish-detail-slider the-detail-container">
+            
+                <div class="fish-image"> <img src="img/fishslider-1.jpg" ></div>
+                <div class="fish-image"> <img src="img/fishslider-2.jpg"></div>
+                <div class="fish-image"> <img src="img/fishslider-3.jpeg"></div>
+                <div  class="fish-image">
+                    <video width="100%" height="100%" controls  loop="true" autoplay="autoplay" muted style="object-fit: cover;">
+                    <source src="clownfish.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video> 
+                </div>
+            
+        </div>
+        <div class="diet-container the-detail-container">
+            <div class="location-details-container">
+                <h3 class="location-header">DIET</h3>
+                <p class="location-details">{{fish.diet}}</p>
+            </div>
+        </div>
+        <div class="diduknow-container the-detail-container">
+            <div class="location-details-container">
+                <h3 class="location-header">DID YOU KNOW?</h3>
+                <p class="location-details">{{fish.diduknow}}</p>
+            </div>
+        </div>
+        <div class="habitat-container the-detail-container">
+            <div class="location-details-container">
+                <h3 class="location-header">HABITAT</h3>
+                <p class="location-details">{{fish.habitat}}</p>
+            </div>
+        </div>
+        <div class="location-container">
+            <div class="location-details-container">
+                <h3 class="location-header">LOCATION</h3>
+                <p class="location-details">They are found in the Red Sea, along the coasts of Australia, Eastern Africa and throughout Southeast Asia. </p>
+            </div>            
+            <!-- <img src="img/icons/{{zone}}-zone-selected.png" height="100%" width="auto" style="min-height: 190px;" />             -->
+            <img src="img/icons/indian-zone.png" height="100%" width="auto" style="min-height: 190px;" />
+            
+        </div>        
+    </aside>
+    
+    <aside class="footer">
+        <div class="three-button-container parent">
+            <div><a href="#/fishlist/{{zone}}">
+                <div class="btn-back-icon btn">
+                    <div>
+                        <img src="img/icons/Back_Arrow_A.png" width="5vh" height="auto" style="height:5vh;visibility: hidden;"> 
+                        <label>BACK</label>
+                    </div>
+                </div></a></div>
+            
+                <div class="btn-habit-icon btn btn-pos-ight">
+                        <div>
+                            <img src="img/icons/Habitat_Icon_A.png" width="5vh" height="5vh" style="height:5vh;visibility: hidden;"> 
+                            <label>HABITAT</label>
+                        </div>
+                    </div> 
+
+                    <div class="btn-habit-icon btn btn-po-right">
+                        <div>
+                            <img src="img/icons/Habitat_Icon_A.png" width="5vh" height="5vh" style="height:5vh;visibility: hidden;"> 
+                            <label>HABITAT</label>
+                        </div>
+                    </div> 
+                    <div class="btn-diet-icon btn">
+                        <img src="img/icons/Diet_Icon_A.png" width="5vh" height="5vh" style="height:5vh;visibility: hidden;"> 
+                        <label style="bottom: -20px;">DIET</label>
+                    </div>
+                    <div class="btn-doyouknow-icon btn tn-pos-left">
+                        <img src="img/icons/Do_You_Know_A.png" width="5vh" height="5vh" style="height:5vh;visibility: hidden;"> 
+                        <label style="bottom: -20px;">DID YOU KNOW?</label>
+                    </div>
+                <div> 
+                <a href="#/home"> 
+                    <button class="btn btn-home">  
+                        <img src="img/icons/Home_A.png" width="auto" height="5vh" style="visibility: hidden; margin: 0 auto; height: 5vh;" />                         
+                        <label style="bottom: -20px;">HOME</label>
+                    </button> 
+                    
+                </a> </div>
+            </div>
+            
+            
+        </div>
+    </aside>
+</section>

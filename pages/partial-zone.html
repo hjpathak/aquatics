@@ -1,0 +1,24 @@
+<!-- partial-home.html -->
+
+<section id="zones" class="zone-page pos-static">
+
+    <aside class="text-container header-container">
+    	<h2>OCEANIC</h2>
+    	<h2>ZONES</h2>
+    </aside>
+    <aside class="zone-list-container">
+    	<!-- <ul>
+    		<a href="#/zones/indian"><li>INDIAN ZONE</li></a>
+    		<a href="#/zones/african"><li>AFRICAN ZONE</li></a>
+    		<a href="#/zones/asian"><li>ASIAN ZONE</li></a>
+    		<a href="#/zones/american"><li>AMERICAN ZONE</li></a>
+    		<a href="#/zones/world"><li>OCEANS OF THE WORLD</li></a>
+    	</ul> -->
+        <ul>
+            <a ng-repeat="(key, val) in myZones" href="#/zones/{{val.name}}"><li>{{val.name.toUpperCase()}} ZONE</li></a>
+        </ul>
+    </aside>
+    
+    <aside class="footer"><img src="img/icons/Generic_Icon_White.png" width="auto" style="display: block; margin: 0 auto; height: 5vh;" /></aside>
+    
+</section>

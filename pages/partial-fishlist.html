@@ -1,0 +1,51 @@
+<!-- partial-home.html -->
+
+<section  class="fishlist-page pos-static">
+
+    <aside class="header-container">
+        <div class="text-container">
+            <h2 class="normal zones-header">OCEANIC ZONES</h2>
+            <h2 class="zones-specific-header">{{zoneUpper}} ZONE</h2>
+        </div>
+        <aside class="plant-icon"><img src="img/icons/Generic_Icon_Blue.png" width="auto" style="display: block; margin: 0 auto; height: 5vh;" /></aside>
+    </aside>
+    <aside class="fishlist-container " ng-model="fishUrl" >
+        <div class="fishlistslider slider" ng-init="test=0">
+        	<div class="fishlist-item"  ng-repeat="i in tempArray  track by $index" >
+                <a ng-href="#/fish/{{zone}}/{{getFishName(i*4)}}" >
+                    <div class="fish-item">
+                    <img src="img/fish1.jpg" >
+                    <!-- <h3 >{{changeRow()}}    </h3>
+                    <h3 >{{changeColumn()}}  </h3> 
+                     -->
+                    <h4 >{{getFishName(i*4)}}</h4>
+                </div>   </a>
+                <a ng-if="fish.length>i*4+1" href="#/fish/{{zone}}/{{getFishName(i*4+1)}}"><div class="fish-item">
+                    <img src="img/fish2.jpg">
+                    <!-- <h3>{{changeRow()}}  </h3>
+                    <h3 >{{getColumn()}}  </h3> 
+                     --><h4>{{getFishName(i*4+1)}}</h4>
+                </div>   </a>
+                <a ng-if="fish.length>i*4+2" href="#/fish/{{zone}}/{{getFishName(i*4+2)}}"><div class="fish-item">
+                    <img src="img/fish1.jpg">
+                    <!-- <h3>{{changeRow()}}  </h3>
+                    <h3 >{{getColumn()}}  </h3> 
+                     --><h4>{{getFishName(i*4+2)}}</h4>
+                </div>   </a>
+                <a ng-if="fish.length>i*4+3" href="#/fish/{{zone}}/{{getFishName(i*4+3)}}"><div class="fish-item">
+                    <img src="img/fish1.jpg">
+                    <!-- <h3>{{changeRow()}}  </h3>
+                    <h3 >{{getColumn()}}  </h3> 
+                     --><h4>{{getFishName(i*4+3)}}</h4>
+                </div>   </a>
+            </div>
+        </div>
+    </aside>
+    <aside class="footer">
+        <div class="two-button-container">
+            <div> <a href="#/zones/{{zone}}"><button class="btn btn-back-icon">  <img src="img/icons/Back_Arrow_A.png" width="auto" style="visibility: hidden; margin: 0 auto; height: 5vh;" />  </button> </a></div>
+            <div> <a href="#/home"> <button class="btn btn-home">  <img src="img/icons/Home_A.png" width="auto" style="visibility: hidden; margin: 0 auto; height: 5vh;" /> </button> </a> </div>
+        </div>
+    </aside>
+    
+</section>

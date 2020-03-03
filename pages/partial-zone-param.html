@@ -1,0 +1,46 @@
+<!-- partial-home.html -->
+<section id="zones-param" class="zone-param-page pos-static">
+
+
+	<aside class="header-container">
+	    <div class="text-container">
+	    	<h2>OCEANIC ZONES</h2>
+	    </div>
+		<aside class="plant-icon"><img src="img/icons/Generic_Icon_Blue.png" width="auto" style="" /></aside>
+
+    </aside>
+    <aside class="map-container">
+    	<img ng-src="img/icons/{{genericMap}}" width="100%" height="auto">
+    </aside>
+    <aside class="zone-detail-slider">
+    	<div class="slider-item">
+    		<div class="zone-details">
+    			<h2 class="zone-header">{{nameUpper}} ZONE</h2>
+    			<p class="zone-details"> {{selectedBrief}} </p>
+    		</div>    		
+    	</div>
+    </aside>
+    
+    <aside class="footer">
+    	<div class="three-button-container">
+            <a href="#/zones">
+                <div class="btn-back-icon btn">
+                    <img src="img/icons/Back_Arrow_A.png" width="5vh" height="auto" style="height:5vh;visibility: hidden;"> 
+                    <label>BACK</label>
+                </div>
+            </a>
+            <a href="#/fishlist/{{name}}">
+                <div class="btn-know-more btn">
+                    <img src="img/icons/Know_More_A.png" width="5vh" height="auto" style="height:5vh;visibility: hidden;"> 
+                    <label>KNOW MORE</label>
+                </div>
+            </a>
+            <a href="#/home">
+                <div class="btn-home btn">
+                    <img src="img/icons/Home_A.png" width="5vh" height="auto" style="height:5vh;visibility: hidden;"> 
+                    <label>HOME</label>
+                </div>
+            </a>    		
+    	</div>
+    </aside>
+</section>

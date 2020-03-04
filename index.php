@@ -126,6 +126,9 @@
 		.btn-habit-icon{ background-image:url('img/icons/Habitat_Icon_D.png'); }
 		.btn-habit-icon:hover,.btn-habit-icon.active{ background-image:url('img/icons/Habitat_Icon_A.png'); }
 
+		.btn-picture-icon{ background-image:url('img/icons/Picture_D.png'); }
+		.btn-picture-icon:hover,.btn-picture-icon.active{ background-image:url('img/icons/Picture_A.png'); }		
+
 		.btn-diet-icon{ background-image:url('img/icons/Diet_Icon_D.png'); }
 		.btn-diet-icon:hover,.btn-diet-icon.active{ background-image:url('img/icons/Diet_Icon_A.png'); }
 

@@ -156,22 +156,34 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                       adaptiveHeight: false
                 });
 
+                $('.btn-picture-icon').click(function(){
+                    $('.the-detail-container').show();
+                    $('.habitat-container').hide();
+                    $('.diduknow-container').hide();
+                    $('.diet-container').hide();
+                    $('.three-button-child-container div.active').removeClass('active');
+                    $('.three-button-container .active').removeClass('active');
+                    $(this).addClass('active');
+                });
                 $('.btn-habit-icon').click(function(){
                     $('.the-detail-container').hide();
                     $('.habitat-container').show();
                     $('.three-button-child-container div.active').removeClass('active');
+                    $('.three-button-container .active').removeClass('active');
                     $(this).addClass('active');
                 });
                 $('.btn-diet-icon').click(function(){
                     $('.the-detail-container').hide();
                     $('.diet-container').show();
                     $('.three-button-child-container div.active').removeClass('active');
+                    $('.three-button-container .active').removeClass('active');
                     $(this).addClass('active');
                 });
                 $('.btn-doyouknow-icon').click(function(){
                     $('.the-detail-container').hide();
                     $('.diduknow-container').show();
                     $('.three-button-child-container div.active').removeClass('active');
+                    $('.three-button-container .active').removeClass('active');
                     $(this).addClass('active');
                 });
             });

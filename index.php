@@ -69,18 +69,21 @@
 		.no-margin,.header-container,.header-container h2{ margin:0; }
 
 		/*Home page*/
-		.home-page{ display: grid;    grid-template-columns: 100% 100% 100%;    grid-template-rows: 70% 15% 15%; }
-		.home-page .text-container{      grid-row-start: 1;  align-self: center; color:#00f4ff; font-size: 3vh;     align-self: end;     margin-bottom: 4vh;}
-		.home-page  .start-button-container{    grid-row-start: 2;    align-self: center;}
-		.home-page .footer-icon{   grid-row-start: 3;    align-self: center;}
+		.home-page{ display: grid;    grid-template-columns: 100% 100% 100%;    grid-template-rows: 140px auto; }
+		.home-page .text-container{  grid-row-start: 2;  align-self: center; color:#00f4ff; font-size: 3vh;     align-self: center;     margin-bottom: 4vh;}
+		/*.home-page  .start-button-container{    grid-row-start: 2;    align-self: center;}*/
+		.start-button-container{     margin-top: 7vh; }
+		.home-page .footer-icon{   grid-row-start: 1;    align-self: end;}
+
+		
 
 		/*icon images*/
 		.btn,.btn:hover{ height: 5vh;    background-repeat: no-repeat;    background-position: center center;    background-size: auto 5vh;    background-color: rgba(0,0,0,0);
     border: none; cursor: pointer; }
     .btn.btn-pos-left:hover{ background-position: center left; }
 		.btn.btn-pos-right:hover{ background-position: center right; }
-		.start-icon{ background-image:url('img/icons/start-d.png');  }
-		.start-icon:hover{ background-image:url('img/icons/start-a.png');   }
+		.start-icon{ height: 7vh;     background-size: auto 7vh; background-image:url('img/icons/start-d.png');  }
+		.start-icon:hover{ height: 7vh;     background-size: auto 7vh; background-image:url('img/icons/start-a.png');   }
 		/*icon images*/
 		/*Home Page*/
 
@@ -108,7 +111,14 @@
 		.zone-param-page .zone-detail-slider{ grid-row-start: 3;     padding: 40px; }
 		.zone-param-page .zone-detail-slider h2{ color:#00f4ff; font-weight: bold; }
 		.zone-param-page .footer{ grid-row-start: 4; }
-		.zone-param-page .slider-item{color: #fff;    display: grid;    grid-template-columns: 100%;}
+		.zone-param-page .zone-detail-slider{color: #fff;    display: grid;    grid-template-columns: 100%; visibility: hidden; }
+		.fishlistslider,.fish-detail-page .fish-detail-slider{ visibility: hidden; }
+		.fish-detail-page .fish-detail-slider.slick-slider,.fishlistslider.slick-slider,.zone-param-page .zone-detail-slider.slick-slider{ visibility: visible; }
+
+		.zone-detail-slider::after{ content: ""; position: absolute;width: 100%; height: 100%; top: 0px; left: 0px; background-image:url('img/loading.gif');background-position: center; background-size: 200px auto; background-repeat: no-repeat; }
+		.zone-detail-slider.slick-slider::after{ content: none; }
+		.zone-detail-slider .slick-dots{ bottom:0px; }
+
 		.zone-param-page .three-button-container{    display: grid;    grid-template-columns: auto auto auto;}
 		.zone-param-page .three-button-container>div{ text-align: center;  }
 		.zone-param-page .map-container img{    height: 100%;    width: auto;    display: block;    margin: 0 auto;}

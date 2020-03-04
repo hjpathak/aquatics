@@ -57,15 +57,40 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         }).state('zones', {
         name:'zones',
         url: '/zones',
-        templateUrl: 'pages/partial-zone.html',
+        templateUrl: 'pages/partial-zone-param.html',
         controller: function($scope, $http, $controller, myService) { 
             myService.getData().then(function(response) {
                 console.log('response');
                 console.log(response);
                 $scope.myZones = response.data.zones;
+
+                
             });
+            setTimeout(function(){
+                $(document).ready(function(){
+                    
+                    $('.zone-detail-slider').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: false,
+                        speed:900,
+                        arrows: true,
+                        dots:true,
+                        adaptiveHeight: false
+                    });
+
+                    $(".zone-detail-slider").on("afterChange", function (){
+                        //change color here
+                        console.log(  );
+
+                        $('#hyperlink').attr('href','#/fishlist/'+$('.slick-slide.slick-active h2').attr('zonename'));
+                    });
+
+                });
+            },500);
+                
          }
-        }).state('azones', {
+        })/*.state('azones', {
         name:'azones',
         url: '/zones/:p',
         templateUrl: 'pages/partial-zone-param.html',
@@ -86,7 +111,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                 });
             });
         }
-        }).state('fishlist', {
+        })*/.state('fishlist', {
         name:'fishlist',
         url: '/fishlist',
         templateUrl: 'pages/partial-fishlist.html',
@@ -155,6 +180,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                       dots:true,
                       adaptiveHeight: false
                 });
+
+                
 
                 $('.btn-picture-icon').click(function(){
                     $('.the-detail-container').show();

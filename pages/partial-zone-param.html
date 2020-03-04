@@ -10,26 +10,26 @@
 
     </aside>
     <aside class="map-container">
-    	<img ng-src="img/icons/{{genericMap}}" width="100%" height="auto">
+    	<img ng-src="img/icons/indian-zone.png" width="100%" height="auto">
     </aside>
     <aside class="zone-detail-slider">
-    	<div class="slider-item">
-    		<div class="zone-details">
-    			<h2 class="zone-header">{{nameUpper}} ZONE</h2>
-    			<p class="zone-details"> {{selectedBrief}} </p>
+    	
+    		<div ng-repeat="(key, val) in myZones" class="zone-details">
+    			<h2 class="zone-header" zonename="{{val.name}}">{{val.name.toUpperCase()}} ZONE</h2>
+    			<p class="zone-details"> {{val.brief}} </p>
     		</div>    		
-    	</div>
+    	
     </aside>
     
     <aside class="footer">
     	<div class="three-button-container">
-            <a href="#/zones">
+            <a href="#/">
                 <div class="btn-back-icon btn">
                     <img src="img/icons/Back_Arrow_A.png" width="5vh" height="auto" style="height:5vh;visibility: hidden;"> 
                     <label>BACK</label>
                 </div>
             </a>
-            <a href="#/fishlist/{{name}}">
+            <a id="hyperlink" href="#/fishlist/indian">
                 <div class="btn-know-more btn">
                     <img src="img/icons/Know_More_A.png" width="5vh" height="auto" style="height:5vh;visibility: hidden;"> 
                     <label>KNOW MORE</label>
